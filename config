@@ -227,6 +227,20 @@ input "type:keyboard" {
 }
 bindsym $mod+F1 exec "swaymsg input \"type:keyboard\" xkb_layout es"
 bindsym $mod+F2 exec "swaymsg input \"type:keyboard\" xkb_layout us"
+bindsym $mod+F3 exec "swaymsg input \"type:keyboard\" xkb_layout jp"
+
+# Japanese input
+# Requisites: sudo apt install fcitx5 fcitx5-mozc
+# Add these to shell profile (e.g. ~/.zshrc)
+#   export XMODIFIERS=@im=fcitx
+#   export GTK_IM_MODULE=fcitx
+#   export QT_IM_MODULE=fcitx
+# Enable Mozc (Japanese) 
+#   Run fcitx5-configtool from your terminal.
+#   Under the Input Method tab, uncheck "Only Show Current Language".
+#   Search for Mozc and add it to your active list.
+#   (Optional) Under Global Options, set a hotkey to switch between English and Japanese (default is usually Ctrl+Space). 
+exec fcitx5 -d
 
 # move focused workspace between monitors
 bindsym $mod+Ctrl+l move workspace to output right
