@@ -77,6 +77,10 @@ bindsym $mod+q kill
 # bindsym $mod+d exec --no-startup-id dmenu_run
 bindsym $mod+d exec --no-startup-id rofi -show run
 bindsym $mod+c exec --no-startup-id cliphist list | rofi -dmenu -p "Clipboard" | cliphist decode | wl-copy
+# [https://github.com/firecat53/networkmanager-dmenu](Network manager on Rofi)
+# Run the script to generate config file
+# Move `networkmanager_dmenu` script to `/usr/local/bin/`: `sudo cp networkmanager_dmenu /usr/local/bin/`
+bindsym $mod+b exec --no-startup-id networkmanager_dmenu
 
 # A more modern dmenu replacement is rofi:
 # bindcode $mod+40 exec "rofi -modi drun,run -show drun"
