@@ -47,9 +47,6 @@ exec --no-startup-id nm-applet
 exec wl-paste --type text --watch cliphist store
 exec wl-paste --type image --watch cliphist store
 
-# Picom compositor
-exec_always --no-startup-id picom --config ~/.config/picom/picom.conf -b
-
 # Use pactl to adjust volume in PulseAudio.
 # Remember to install playerctl `sudo apt-get install pulseaudio`
 set $refresh_i3status killall -SIGUSR1 i3status
