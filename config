@@ -56,6 +56,8 @@ bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute @DEFAULT_SINK@ to
 bindsym XF86AudioMicMute exec --no-startup-id pactl set-source-mute @DEFAULT_SOURCE@ toggle && $refresh_i3status
 # Remember to install playerctl `sudo apt-get install playerctl`
 bindsym XF86AudioPlay exec --no-startup-id playerctl play-pause
+bindsym XF86AudioNext exec --no-startup-id playerctl next
+bindsym XF86AudioPrev exec --no-startup-id playerctl previous
 
 #  If this is not working, just run `sudo apt-get install brightnessctl` and `sudo usermod -aG video ${USER}` for your user, then logout and login, source: https://github.com/Hummer12007/brightnessctl/issues/63
 bindsym XF86MonBrightnessDown exec brightnessctl set 10-
